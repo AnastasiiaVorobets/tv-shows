@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from '../components/SearchBar/SearchBar';
 import ShowList from '../components/ShowList/ShowList';
-import Loader from '../components/Loader/Loader'
+import Loader from '../components/Loader/Loader';
 
 function ListPage() {
   const [query, setQuery] = useState('');
   const [shows, setShows] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const handleSearch = (searchTerm) => {
+    setQuery(searchTerm);
+  };
 
   useEffect(() => {
     if (query.length >= 2) {
@@ -18,7 +22,10 @@ function ListPage() {
           if (data.length === 0) {
             setShows([]);
           } else {
-            setShows(data.map((result) => result.show));
+            const filteredResults = data.filter((result) =>
+              result.show.name.toLowerCase().startsWith(query.toLowerCase())
+            );
+            setShows(filteredResults.map((result) => result.show));
           }
         })
         .catch((error) => {
@@ -36,7 +43,10 @@ function ListPage() {
         setQuery={setQuery}
         query={query}
       />
-      {loading ? <Loader /> : <ShowList shows={shows} />}
+      {loading
+        ? <Loader /> 
+        : <ShowList shows={shows} />
+      }
     </div>
   );
 }

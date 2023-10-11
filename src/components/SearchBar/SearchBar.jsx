@@ -2,7 +2,6 @@ import React from 'react';
 import './SearchBar.css';
 
 function SearchBar({ setQuery, query }) {
-
   return (
     <div className="search-block">
       <h1 className='title'>Let's find your favorite shows!</h1>
