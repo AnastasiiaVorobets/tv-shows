@@ -8,16 +8,24 @@
 
 .show-details {
   padding: 30px;
-  width: 400px;
+  width: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 50px;
   background-color: black;
   color: white;
   border-radius: 10px;
 }
 
-.show_image {
-  width: 200px;
+.image {
+  height: 400px;
+  width: 300px;
+}
+
+.details {
+  padding: 20px;
+  background-color: gray;
+  border-radius: 10px;
 }

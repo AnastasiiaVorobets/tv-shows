@@ -8,10 +8,6 @@ function ListPage() {
   const [shows, setShows] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const handleSearch = (searchTerm) => {
-    setQuery(searchTerm);
-  };
-
   useEffect(() => {
     if (query.length >= 2) {
       setLoading(true);
