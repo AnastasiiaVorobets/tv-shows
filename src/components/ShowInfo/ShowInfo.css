@@ -1,0 +1,19 @@
+.message {
+  text-align: center;
+}
+
+.show-card {
+  width: 250px;
+  height: 400px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(16, 16, 16);
+}
+
+.show-card a {
+  text-decoration: none;
+  color: white;
+}
