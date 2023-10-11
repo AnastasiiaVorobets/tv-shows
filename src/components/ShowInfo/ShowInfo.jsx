@@ -7,7 +7,11 @@ function ShowInfo({ show }) {
     <div className="show-card">
       <Link to={`/details/${show.id}`}>
         {show.image && show.image.medium && (
-          <img src={show.image.medium} alt={show.name} />
+          <img
+            src={show.image.medium} 
+            alt={show.name}
+            className='show_image'
+          />
         )}
         <h3 className='name'>{show.name}</h3>
         <p>Rating: {show.rating.average || '-'}</p>
