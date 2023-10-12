@@ -26,7 +26,7 @@ function ShowDetails({ show }) {
                 className="details__image"
               />
             </div>
-            <div className='detail__info'>
+            <div className='details__info'>
               <h1>{name}</h1>
               <p>Genres: {genres.join(', ')}</p>
               <p>Rating: {rating.average || '-'}</p>

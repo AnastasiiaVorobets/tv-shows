@@ -21,12 +21,12 @@
   border-radius: 10px;
 }
 
-.detail__image {
+.details__image {
   height: 400px;
   width: 300px;
 }
 
-.detail__info {
+.details__info {
   padding: 20px;
   background-color: gray;
   border-radius: 10px;
