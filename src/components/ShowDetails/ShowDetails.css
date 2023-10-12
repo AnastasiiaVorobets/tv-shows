@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.show-details {
+.details {
   padding: 30px;
   width: 800px;
   display: flex;
@@ -19,12 +19,12 @@
   border-radius: 10px;
 }
 
-.image {
+.detail__image {
   height: 400px;
   width: 300px;
 }
 
-.details {
+.detail__info {
   padding: 20px;
   background-color: gray;
   border-radius: 10px;

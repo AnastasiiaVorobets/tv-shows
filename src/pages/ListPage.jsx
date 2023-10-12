@@ -7,8 +7,13 @@ function ListPage() {
   const [query, setQuery] = useState('');
   const [shows, setShows] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [searchStarted, setSearchStarted] = useState(false);
 
   useEffect(() => {
+    if (query.length > 0) {
+      setSearchStarted(true);
+    }
+
     if (query.length >= 2) {
       setLoading(true);
       fetch(`https://api.tvmaze.com/search/shows?q=${query}`)
@@ -41,7 +46,7 @@ function ListPage() {
       />
       {loading
         ? <Loader /> 
-        : <ShowList shows={shows} />
+        : <ShowList shows={shows} searchStarted={searchStarted}/>
       }
     </div>
   );

@@ -1,8 +1,4 @@
-.message {
-  text-align: center;
-}
-
-.show-card {
+.card {
   width: 250px;
   height: 400px;
   padding: 30px;
@@ -13,12 +9,12 @@
   background-color: rgb(16, 16, 16);
 }
 
-.show-card a {
+.card a {
   text-decoration: none;
   color: white;
 }
 
-.show_image {
+.card__image {
   width: 200px;
   height: 300px;
 }

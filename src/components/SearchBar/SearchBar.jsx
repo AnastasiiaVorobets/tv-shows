@@ -3,10 +3,10 @@ import './SearchBar.css';
 
 function SearchBar({ setQuery, query }) {
   return (
-    <div className="search-block">
-      <h1 className='title'>Let's find your favorite shows!</h1>
+    <div className="search">
+      <h1 className='search__title'>Let's find your favorite shows!</h1>
       <input
-        className='input_field'
+        className='search__field'
         type="text"
         placeholder="Type the show's name"
         value={query}

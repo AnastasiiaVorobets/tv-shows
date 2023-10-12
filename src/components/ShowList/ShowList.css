@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.show__container {
+.show-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
